@@ -1,9 +1,3 @@
-/*
-Marina Linguanoto Gajego		      	 RA: 835982
-José Luiz Bianchini 		             RA: 836863
-José Rubens Martinez Junior		         RA: 835925
-*/
-
 function menuMob(){
     var menu = document.getElementById("myLinks");
     var main = document.getElementById("main");

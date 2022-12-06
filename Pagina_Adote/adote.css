@@ -1,0 +1,418 @@
+/*
+Marina Linguanoto Gajego		      	 RA: 835982
+José Luiz Bianchini 		             RA: 836863
+José Rubens Martinez Junior		         RA: 835925
+*/
+
+/******************* RESET CSS *****************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+/******************* HTML5 reset para browsers antigos *******************/
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/******************* FIM DO RESET *******************/
+
+
+/******************* VARIÁVEIS *******************/
+
+:root {
+    /* CORES */
+    --base-color: #049DD9;
+    --base-color-hover: #1076d6;
+    --base-color-second: #221E41;
+    --base-color-second-hover: #8b86ac;
+    --text-color: #272727;
+    --text-color-hover: #3b3b3b;
+    --text-color-light: #757384;
+    --text-color-light-hover: #626072;
+    --body-color: #FAFAFA;
+
+    /* DEGRADÊS BOTÕES */
+    --gradient-submit: linear-gradient(90deg, #00BA2B 0%, #009524 100%);
+    --gradient-submit-hover: linear-gradient(90deg, #049c27 0%, #028020 100%);
+    
+    --gradient-calculate: linear-gradient(90deg, #FAAD81 0%, #FE742C 100%);
+    --gradient-calculate-hover: linear-gradient(90deg, #e29569 0%, #e25f19 100%);
+
+    /* FONTES */
+    --title-font-size: 1.875rem;
+    --subtitle-font-size: 1rem;
+    --title-font: 'Poppins', sans-serif;
+    --body-font: 'DM Sans', sans-serif;
+}
+
+/******************* PRINCIPAIS *******************/
+
+html { 
+    background-color: var(--body-color);
+    scroll-behavior: smooth;
+    -webkit-filter: blur(.2px);
+}
+
+body {
+    background-image: url(../assets/imagens/background-patas-svg.svg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: repeat-y;
+    font: 400 1rem var(--body-font);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+.title {
+    font-size: var(--title-font-size);
+    font-family: var(--title-font);
+    color: var(--base-color);
+}
+
+.subtitle {
+    font-size: var(--subtitle-font-size);
+    font-family: var(--title-font);
+    color: var(--base-color-second);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/******************* HEADER  *******************/
+
+
+header nav span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem;
+    border: 2px solid var(--base-color-second);
+    border-radius: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--base-color-second);
+    font-family: var(--title-font);
+    font-size: var(--subtitle-font-size);
+}
+
+header a img {
+    width: 3.5rem;
+}
+
+header nav img {
+    width: 1.7rem;
+    margin-right: .3rem;
+}
+
+.inativo {
+    border: none;
+}
+
+/******************* MAIN *******************/
+
+/* MARGEM PADRÃO ENTRE CONTEÚDOS */
+main section {
+    padding-top: 1rem;
+}
+
+h2 {
+    font-weight: 600;
+    color: var(--base-color);
+    font-size: 2.8rem;
+    padding: 3rem 0;
+    font-family: var(--title-font);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main section:nth-child(1) {
+    text-align: center;
+}
+
+main section:nth-child(1) p {
+    font-size: 1.5rem;
+    font-family: var(--title-font);
+}
+
+main section article a img {
+    width: 3rem;
+    margin: .3rem;
+}
+
+main section article a.btn-tipo {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-family: var(--title-font);
+}
+
+.btn-tipo {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem;
+    border: 2px solid var(--base-color-second);
+    border-radius: 10px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.animals-cards {
+    width: 15rem;
+    border-radius: 2rem 2rem .5rem .5rem;
+    -webkit-box-shadow: 0px 8px 31px 1px rgba(0,0,0,0.39); 
+    box-shadow: 0px 8px 13px 1px rgba(0,0,0,0.39);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAFAFA;
+    margin: 1rem;
+}
+
+.animals-cards img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.animals-name {
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--title-font);
+    color: var(--text-color);
+}
+
+
+.animals-desc {
+    font-size: .9rem;
+    color: var(--text-color-light);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.animals-cards a {
+    background-color: #f19eb4;
+    border-radius: 5px;
+    font-family: var(--title-font);
+    font-size: 1rem;
+    padding: 0 2rem;
+    font-weight: 600;
+    color: #FAFAFA;
+    border: none;
+    margin: .5rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-adote img {
+    width: 30px;
+}
+
+main p bold {
+    color: red;
+    font-weight: 600;
+}
+
+
+/******************* FOOTER *******************/
+
+footer article:nth-child(2){
+    text-align: center;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+footer section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0 1rem 0;
+}
+
+footer section article nav{
+    display: flex;
+    flex-direction: column;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: var(--base-color-second);
+    margin: .5rem;
+}
+
+footer nav a:hover {
+    color: var(--base-color-second-hover);
+}
+
+#developed {
+    text-align: center;
+    color: var(--text-color-light);
+    font-size: .8rem;
+    padding: 1rem;
+    border-top: 2px solid rgb(231, 226, 226);
+}
+
+footer section img {
+    width: 2rem;
+}
+
+/*************** RESPONSIVO  *****************/
+
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .icon{
+        display: none;
+    }
+    header section.topnav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 0 3rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 690px;
+    }
+    header section a {
+        font-size: .9rem;
+    }
+    header picture a img {
+        width: 2.5rem;
+    }
+    header nav img {
+        width: 1.3rem;
+    }
+    h2 {
+        font-size: 2.3rem;
+        padding: .2rem 0;
+    }
+    main section:nth-child(1) p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    main section article a img {
+        width: 2rem;
+        margin: .3rem;
+    }
+    main section article a.btn-tipo {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .animals-cards {
+        width: 12rem;
+        margin: 1rem 0;
+    }
+    .animals-name {
+        margin-top: .5rem;
+    }
+    .animals-desc {
+        margin: .5rem 0;
+    }
+    .topnav {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .topnav #myLinks {
+        display: none;
+        overflow: hidden;
+    }
+
+    .topnav a {
+        color: var(--text-color);
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 1rem;
+        display: block;
+        text-align: center;
+    }
+
+    .topnav a.active {
+        text-align: left;
+    }
+
+    .topnav a.icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    header nav {
+        height: 100vh;
+    }
+
+    header nav span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        margin: 2rem 0;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}

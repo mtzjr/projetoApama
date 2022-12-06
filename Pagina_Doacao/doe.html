@@ -1,0 +1,125 @@
+<!--
+Marina Linguanoto Gajego		      	 RA: 835982
+José Luiz Bianchini 		             RA: 836863
+José Rubens Martinez Junior		         RA: 835925
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="doe.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="doe.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <title>APAMA</title>
+</head>
+<body>
+    <header>
+        <section class="topnav container">
+            <a href="../index.html" class="active">
+                <img src="../assets/imagens/logo-ong.png" alt="Logo ONG">
+            </a>
+            <nav id="myLinks">
+                <span class="nav-btn inativo">
+                    <img src="../assets/imagens/icone-pata.png" alt="Pata">
+                    <a href="../index.html">Página Inicial</a>
+                </span>
+                <span class="nav-btn inativo">
+                    <img src="../assets/imagens/icone-pata.png" alt="Pata">
+                    <a href="../Pagina_Adote/adote.html">Adote um animal</a>
+                </span>
+                <span class="nav-btn ativo">
+                    <img src="../assets/imagens/icone-pata.png" alt="Pata">
+                    <a href="./doe.html">Faça uma doação</a>                    
+                </span>
+                <span class="nav-btn inativo">
+                    <img src="../assets/imagens/icone-pata.png" alt="Pata">
+                    <a href="../Pagina_Contato/contato.html">Contato</a>                    
+                </span>
+            </nav>
+            <a href="javascript:void(0);" class="icon" onclick="menuMob()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </section>
+    </header>
+
+    <main id="main">
+        <section class="container">
+            <h2>AJUDE COMO PUDER!</h2>
+            <article>
+                <div id="btn-doacoes" class="flex">
+                    <button type="button" id="pix" onclick="tipoPix();">PIX</button>
+                    <button type="button" id="transf" onclick="tipoTransf();">Depósito ou Transferência</button>
+                    <button type="button" id="boleto" onclick="tipoBoleto();">Boleto ou Cartão</button>
+                    <button type="button" id="dinheiro" onclick="tipoDinheiro();">Dinheiro</button>
+                </div>
+                <div id="info-dados" class="flex">
+                    <img src="../assets/imagens/qrcode.png" id="imagem-doacao" alt="QRCODE PIX">
+                    <p id="desc-doacao">Para fazer uma doação de qualquer valor via PIX é só escanear o QRCode ou pesquisar pelo nosso CNPJ 01.234.567/0000-01.</p>
+                </div>
+            </article>
+        </section>
+        <section class="doacao container">
+            <h2>Descubra quantos animais você pode ajudar com sua doação</h2>
+            <div action="" class="calculo">
+                <p class="valor">Valor</p>
+                <input id="valor"  placeholder="R$"  step="0.01" name="quantity" min="0.01">
+                <button id="btn-calc" onclick="pegaValor()">Calcular</button>
+            </div>
+
+            <div class="contribuicao">
+                <span class="itens-ajuda">
+                    <img src="../assets/imagens/doe1.png" alt="Ícone doação dinheiro">
+                    <p>Com sua doação de <span class="results" id="valorAtual">0</span>, você contribuirá com:</p>
+                </span>
+
+                <span class="itens-ajuda">
+                    <img src="../assets/imagens/doe2.png" alt="Ícone ração">
+                    <p><span class="results" id="racao">0</span> de ração</p>
+                </span>
+
+                <span class="itens-ajuda">
+                    <img src="../assets/imagens/doe3.png" alt="Ícone medicamentos">
+                    <p>Você ajudaria <span class="results" id="remedios">0</span> animais que precisam de remédios</p>
+                </span>
+                
+                <span class="itens-ajuda">
+                    <img src="../assets/imagens/doe4.png" alt="Ícone bisturi">
+                    <p>Ou <span class="results" id="castrados">0</span> animais poderão ser cadastrados com este valor</p>
+                </span>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <section class="container">
+            <article>
+                <nav>
+                    <a href="../index.html">Página Inicial</a>
+                    <a href="../Pagina_Adote/adote.html">Adote um animal</a>
+                    <a href="./doe.html">Faça um doação</a>
+                    <a href="../Pagina_Contato/contato.html">Contato</a>
+                </nav>
+            </article>
+            <article>
+                <img src="../assets/imagens/logo-ong.png" alt="Logo ONG">
+                <p>Texto aqui</p>
+            </article>
+        </section>
+        <section id="developed">
+            <article class="container">
+                <picture>
+                    <img src="../assets/imagens/logo-martinez.png" alt="Logo MZM">
+                </picture>
+                <p>Desenvolvido por MZM</p>
+                <p>© APAMA, 2021</p>
+            </article>
+        </section>
+    </footer>
+</body>
+
+</html>
